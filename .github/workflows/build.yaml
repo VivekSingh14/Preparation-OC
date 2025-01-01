@@ -20,7 +20,7 @@ jobs:
         go-version: 1.22.0
 
     - name: Build
-      run: go build -v ArrayAndString/TwoSum.go
+      run: go build -v DynamicProgram/buysellstocks.go
       
     - name: Test
-      run: go test -v ArrayAndString/TwoSum.go
+      run: go test -v DynamicProgram/buysellstocks.go
