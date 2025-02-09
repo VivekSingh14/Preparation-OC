@@ -11,7 +11,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "DynamicProgram/buysellstocks.go",
+            "program": "DynamicProgram/houseRobber2.go",
             "buildFlags": "-tags dynamic"
         }
     ]

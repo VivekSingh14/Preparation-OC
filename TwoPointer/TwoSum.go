@@ -4,7 +4,7 @@ import "fmt"
 
 //Two Sum to target
 
-func main() {
+func main1() {
 	arr := []int{2, 7, 11, 15, 17, 19, 24, 28, 33}
 	target := 18
 	fmt.Println(twoSum(arr, target))
