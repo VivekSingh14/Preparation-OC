@@ -50,7 +50,7 @@ func printInOrder(n *node) {
 	}
 }
 
-func main() {
+func main1() {
 
 	//insert into bst or bt
 	var t bst
