@@ -20,7 +20,7 @@ jobs:
         go-version: 1.22.0
 
     - name: Build
-      run: go build -v DynamicProgram/houseRobber2.go
+      run: go build -v graphQuestions/numOfConnectedComponentinUndirectedGraphPremuim.go
       
     - name: Test
-      run: go test -v DynamicProgram/houseRobber2.go
+      run: go test -v graphQuestions/numOfConnectedComponentinUndirectedGraphPremuim.go
