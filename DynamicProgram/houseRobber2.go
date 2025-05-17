@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // House robber -> house in circular route.
-func main() {
+func main8() {
 
 	nums := []int{1, 2, 3}
 

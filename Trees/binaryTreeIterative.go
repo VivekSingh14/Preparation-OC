@@ -41,12 +41,15 @@ func main() {
 	var t bst1
 	t.InsertIntoTree1(4)
 	t.InsertIntoTree1(2)
-	t.InsertIntoTree1(5)
+	t.InsertIntoTree1(6)
 	t.InsertIntoTree1(1)
 	t.InsertIntoTree1(3)
-	t.InsertIntoTree1(10)
+	t.InsertIntoTree1(5)
+	t.InsertIntoTree1(7)
 
 	fmt.Println(preOrder(t.root))
+
+	fmt.Println(inorder(t.root))
 
 }
 
@@ -57,17 +60,42 @@ func preOrder(root *node1) []int {
 
 	curr := root
 
-	for curr != nil || len(stack) > 0 {
-		if curr != nil {
-			res = append(res, curr.data)
-			stack = append(stack, curr.left)
-			curr = curr.left
-		} else {
-			stack = stack[:len(stack)-1]
-			curr = stack[len(stack)-1]
-			curr = curr.right
+	stack = append(stack, curr)
 
+	for len(stack) != 0 {
+		temp := stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+
+		res = append(res, temp.data)
+
+		if temp.right != nil {
+			stack = append(stack, temp.right)
+		}
+
+		if temp.left != nil {
+			stack = append(stack, temp.left)
 		}
 	}
 	return res
+}
+
+func inorder(root *node1) []int {
+	var stack []*node1
+	var res []int
+
+	curr := root
+
+	for curr != nil || len(stack) != 0 {
+		for curr != nil {
+			stack = append(stack, curr)
+			curr = curr.left
+		}
+
+		curr = stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		res = append(res, curr.data)
+		curr = curr.right
+	}
+	return res
+
 }

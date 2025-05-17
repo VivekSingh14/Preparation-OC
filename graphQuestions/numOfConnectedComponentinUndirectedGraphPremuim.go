@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main9() {
+func main() {
 
 	n := 6
 	edges := [][]int{{0, 1}, {1, 2}, {2, 3}, {4, 5}}
