@@ -53,7 +53,7 @@ func FindKthSmallest(arr []int, k int) (int, bool) {
 	return (*h)[0], true
 }
 
-func main() {
+func main3() {
 	arr := []int{2, 8, 4, 9, 3, 10}
 
 	res, _ := FindKthSmallest(arr, 3)
