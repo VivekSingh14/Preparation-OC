@@ -38,7 +38,7 @@ func (h *MaxHeap2) Pop() interface{} {
 }
 
 // FindKthSmallest2 finds the k closest numbers to X
-func FindKthSmallest2(arr []mapping, k int) ([]int, bool) {
+func FindKthSmallest2(arr []mapping, k int) ([]mapping, bool) {
 	if k <= 0 || k > len(arr) || len(arr) == 0 {
 		return nil, false
 	}
@@ -55,18 +55,20 @@ func FindKthSmallest2(arr []mapping, k int) ([]int, bool) {
 	}
 
 	// Collect the k closest numbers
-	result := make([]int, 0, k)
-	for h.Len() > 0 {
-		m := heap.Pop(h).(mapping)
-		result = append(result, m.num)
-	}
+	// result := make([]int, 0, k)
+	// for h.Len() > 0 {
+	// 	m := heap.Pop(h).(mapping)
+	// 	result = append(result, m.num)
+	// }
 
-	return result, true
+	//or
+
+	return (*h), true // or return result, true
 }
 
 // find the k closest numbers to X from given array
 // so in this case 6,7,8 will returned cause 7-6 = 1, 7-7 = 0, |7-8| = 1
-func main4() {
+func main() {
 	arr := []int{5, 6, 7, 8, 9}
 	K := 3
 	X := 7
@@ -78,7 +80,7 @@ func main4() {
 
 	result, ok := FindKthSmallest2(temp, K)
 	if ok {
-		fmt.Println(result) // Output: [6 7 8]
+		fmt.Println(result) // Output: [6 7 8] or [{1 6} {1 8} {0 7}]
 	} else {
 		fmt.Println("Invalid input")
 	}

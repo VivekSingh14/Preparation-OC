@@ -50,7 +50,7 @@ func FindKSmallest1(arr []int, k int) ([]int, bool) {
 	return res, true
 }
 
-func main() {
+func main4() {
 	arr := []int{6, 5, 3, 2, 8, 10, 9}
 	k := 3
 
