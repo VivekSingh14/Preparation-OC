@@ -11,7 +11,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "graphQuestions/numOfConnectedComponentinUndirectedGraphPremuim.go",
+            "program": "NewLearning_Heap/kthSmallest.go",
             "buildFlags": "-tags dynamic"
         }
     ]

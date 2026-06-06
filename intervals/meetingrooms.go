@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func main() {
+func main4() {
 
 	//true case
 	intervals := [][]int{{0, 30}, {35, 40}, {45, 50}}

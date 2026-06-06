@@ -36,7 +36,7 @@ func (nod *node1) InsertIntoTree1(data int) {
 	}
 }
 
-func main() {
+func main2() {
 
 	var t bst1
 	t.InsertIntoTree1(4)
