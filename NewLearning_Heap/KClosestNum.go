@@ -68,7 +68,7 @@ func FindKthSmallest2(arr []mapping, k int) ([]mapping, bool) {
 
 // find the k closest numbers to X from given array
 // so in this case 6,7,8 will returned cause 7-6 = 1, 7-7 = 0, |7-8| = 1
-func main() {
+func main6() {
 	arr := []int{5, 6, 7, 8, 9}
 	K := 3
 	X := 7

@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main6() {
+func main() {
 	arr := []int{1, 1, 1, 3, 2, 2, 4}
 	K := 2
 
@@ -15,7 +15,7 @@ func main6() {
 		frequencyMap[arr[i]]++
 	}
 
-	res, _ := FindKSmallest3(frequencyMap, K)
+	res, _ := FindKFrequentNums(frequencyMap, K)
 
 	for _, num := range res {
 		for key, value := range frequencyMap {
@@ -54,7 +54,7 @@ func (h *MinHeap3) Pop() interface{} {
 	return x
 }
 
-func FindKSmallest3(frequencyMap map[int]int, k int) ([]int, bool) {
+func FindKFrequentNums(frequencyMap map[int]int, k int) ([]int, bool) {
 	if k <= 0 || k > len(frequencyMap) || len(frequencyMap) == 0 {
 		return nil, false
 	}
