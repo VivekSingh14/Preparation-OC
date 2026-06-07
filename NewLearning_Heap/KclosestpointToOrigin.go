@@ -12,7 +12,7 @@ type co struct {
 	x, y int
 }
 
-func main8() {
+func main() {
 	arr := [][]int{{1, 3}, {-2, 2}, {5, 8}, {0, 1}}
 	K := 2
 

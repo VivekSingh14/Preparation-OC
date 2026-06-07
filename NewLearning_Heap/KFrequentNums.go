@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func main8() {
 	arr := []int{1, 1, 1, 3, 2, 2, 4}
 	K := 2
 
