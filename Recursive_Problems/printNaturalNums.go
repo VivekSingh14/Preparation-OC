@@ -6,27 +6,29 @@ func main() {
 	n := 6
 
 	print(n)
-	fmt.Println("--------------")
+	fmt.Println("\n--------------")
 	printreverse(n)
 }
 
 // increasing order
 func print(n int) {
-	if n == 0 {
+	if n == 1 {
+		fmt.Print(n, " ")
 		return
 	}
 
 	print(n - 1)
 
-	fmt.Println(n)
+	fmt.Print(n, " ")
 }
 
 func printreverse(n int) {
-	if n == 0 {
+	if n == 1 {
+		fmt.Print(n, " ")
 		return
 	}
 
-	fmt.Println(n)
+	fmt.Print(n, " ")
 
 	printreverse(n - 1)
 }
